@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## Project 1
 
-You can use the [editor on GitHub](https://github.com/grantnelson53/cit281-lab1/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+In this project, we had an introduction and learned about server-side JavaScript, using node.js
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Source Code
 
-```markdown
-Syntax highlighted code block
+    
+    let date = new Date();
+    let weekday = date.getDay();
+    let weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] 
+    console.log(weekdays[weekday]);
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+    function getRandomInteger(min, max) {
+      return Math.floor(Math.random() * (max - min) + min);
+    }
 
-**Bold** and _Italic_ and `Code` text
+    //array
+    let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-[Link](url) and ![Image](src)
-```
+    function randomString() {
+        let stringer = '';
+        for (i = 0; i <= (getRandomInteger(5,26)); i++) {
+            stringer = stringer + letters[getRandomInteger(0,26)];
+        }
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+        return stringer;
+    }
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/grantnelson53/cit281-lab1/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    console.log(randomString());
